@@ -17,18 +17,20 @@
 
   <ion-item>
     <ion-label>Name</ion-label>
-    <ion-input placeholder="Apple" ></ion-input> <!--This allows to capture text input when using ngModel-->
+    <ion-input [(ngModel)]="item.name" placeholder="Apple" ></ion-input> <!--This allows to capture text input when using ngModel-->
   </ion-item>
 
   <ion-item>
     <ion-label>Quantity</ion-label>
-    <ion-input type="number" placeholder="1" ></ion-input> 
+    <ion-input [(ngModel)]="item.quantity" type="number" placeholder="1" ></ion-input> 
   </ion-item>
 
   <ion-item>
     <ion-label>Price</ion-label>
-    <ion-input type="number" placeholder="30.0" ></ion-input> 
+    <ion-input [(ngModel)]="item.price" type="number" placeholder="30.0" ></ion-input> 
   </ion-item>
+
+  <!-- {{ item | json }} -->
 
   <button ion-button block clear>Add</button>
 

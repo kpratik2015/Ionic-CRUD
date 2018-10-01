@@ -1,8 +1,13 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
-      Ionic Blank
+      Shopping List
     </ion-title>
+    <ion-buttons end> <!--Gonna place this button at the end-->
+      <button navPush="AddShoppingItemPage" ion-button> <!--this is a declarative way of telling ionic that we want to go to addshoppingitempage-->
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons> 
   </ion-navbar>
 </ion-header>
 

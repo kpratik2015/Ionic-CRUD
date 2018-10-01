@@ -29,3 +29,10 @@ For development, in firebase database rules section:
 }
 ```
 
+Creating a new page:
+
+```
+ionic generate page AddShoppingItem
+```
+
+Restart ionic lab in case of invalid link error.

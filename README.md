@@ -36,3 +36,17 @@ ionic generate page AddShoppingItem
 ```
 
 Restart ionic lab in case of invalid link error.
+
+For Angular 6.x
+
+```
+npm install rxjs@6 rxjs-compat@6 --save
+```
+
+Importing Observable and map as follows:
+
+```
+import 'rxjs/add/operator/map';
+import { Observable } from 'rxjs';
+```
+

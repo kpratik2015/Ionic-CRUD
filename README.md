@@ -18,3 +18,14 @@ Then
 npm install firebase angular fire2
 ```
 
+For development, in firebase database rules section:
+
+```
+{
+  "rules": {
+    ".read": true,
+    ".write": true
+  }
+}
+```
+

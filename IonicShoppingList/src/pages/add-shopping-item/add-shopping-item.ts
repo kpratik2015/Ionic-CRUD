@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Item } from '../../models/item/item.model';
+import { ShoppingListService } from '../../services/shopping-list/shopping-list.service';
 
 /**
  * Generated class for the AddShoppingItemPage page.
@@ -18,15 +19,26 @@ export class AddShoppingItemPage {
 
   item: Item = {
     name: '',
-    quantity: 0,
-    price: 0
+    quantity: undefined,
+    price: undefined
   }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    private shopping: ShoppingListService
+    ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AddShoppingItemPage');
+  }
+
+  addItem(item: Item) {
+    this.shopping.addItem(item).then(ref => { 
+      // console.log(ref.key); // key to the item we added
+      this.navCtrl.setRoot('HomePage', { key: ref.key }); // we are passing the ref key on homepage
+    });
   }
 
 }
